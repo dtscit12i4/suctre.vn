@@ -1,0 +1,71 @@
+FileETag none
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.m377.net$ [NC]
+RewriteRule ^(.*)$ http://m377.net/$1 [R=301,L]
+
+ErrorDocument 404 /404.php
+ErrorDocument 401 /404.php
+ErrorDocument 403 /404.php
+ErrorDocument 500 /404.php
+
+RewriteRule ^home/									?module=home [L]
+RewriteRule ^product-list/([0-9]*)/						?module=product_list&page=$1 [L]
+RewriteRule ^product-list/								?module=product_list [L]
+
+RewriteRule ^danh-muc-du-an/(.*)/([0-9]*)/					?module=product_cat&slug=$1&page=$2 [L]
+RewriteRule ^danh-muc-du-an/(.*)/							?module=product_cat&slug=$1 [L]
+RewriteRule ^danh-muc-du-an/								?module=product_cat [L]
+RewriteRule ^du-an-bat-dong-san/([0-9]*)/					?module=product_categories&page=$1 [L]
+RewriteRule ^du-an-bat-dong-san/(.*)					?module=product_categories&slug=$1 [L]
+RewriteRule ^du-an-bat-dong-san/					?module=product_categories [L]
+
+RewriteRule ^du-an/(.*)							?module=product&slug=$1 [L]
+
+RewriteRule ^post/(.*)							?module=post&slug=$1 [L]
+
+RewriteRule ^post/							?module=post [L]
+
+RewriteRule ^tin-tuc-xem/(.*)							?module=tin_tuc_xem&slug=$1 [L]
+
+RewriteRule ^tin-tuc/(.*)/([0-9]*)/								?module=tin_tuc&slug=$1&page=$2 [L]
+
+RewriteRule ^tin-tuc/([0-9]*)/						?module=tin_tuc&page=$1 [L]
+
+RewriteRule ^tin-tuc/(.*)/								?module=tin_tuc&slug=$1 [L]
+
+RewriteRule ^tin-tuc/(.*)								?module=tin_tuc&slug=$1 [L]
+
+RewriteRule ^tin-tuc/						?module=tin_tuc [L]
+
+RewriteRule ^tuyen-dung-xem/(.*)							?module=tuyen_dung_xem&slug=$1 [L]
+
+RewriteRule ^tuyen-dung/(.*)/([0-9]*)/						?module=tuyen_dung&slug=$1&page=$2 [L]
+
+RewriteRule ^tuyen-dung/([0-9]*)/						?module=tuyen_dung&page=$1 [L]
+
+RewriteRule ^tuyen-dung/(.*)/								?module=tuyen_dung&slug=$1 [L]
+
+RewriteRule ^tuyen-dung/(.*)								?module=tuyen_dung&slug=$1 [L]
+
+RewriteRule ^tuyen-dung/						?module=tuyen_dung [L]
+
+RewriteRule ^gioi-thieu/(.*)							?module=gioi_thieu&slug=$1 [L]
+
+RewriteRule ^thu-vien.html							?module=thu_vien [L]
+
+RewriteRule ^lien-he.html							?module=lien_he [L]
+
+RewriteRule ^support.html							?module=support [L]
+
+RewriteRule ^sitemap.html							?module=sitemap [L]
+
+RewriteRule ^search-result/([0-9]*)/						?module=search_result&page=$1 [L]
+
+RewriteRule ^search-result/						?module=search_result [L]
+
+<IfModule mod_php5.c>
+   php_value short_open_tag 1
+</IfModule>
+
+

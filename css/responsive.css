@@ -1,0 +1,266 @@
+@media (min-width: 1275px){
+	.container-new {
+    	width: 1275px;
+	}
+	.menutop li {
+		padding: 0 17px;
+	}
+}
+@media (max-width: 1199px)
+{
+	.blockleft_list.fixed {
+		left: 45px;
+		width: 222px;
+	}
+	.cat_ul.fixed {
+		left: 45px;
+		width: 222px;
+	}
+	.block-footer .footer-right .copyright {
+		margin-bottom: 10px;
+	}
+	.view-more .line-more {
+		width: 91%;
+	}
+	.view-more .text-right {
+		width: 9%;
+	}
+	.menutop li {
+		padding: 0 4px;
+	}
+	.view-more-project .line-more {
+		width: 84%;
+	}
+}
+@media (max-width: 991px)
+{
+	/* style mmnu */
+	.booking-toggle {
+    position: absolute;
+    z-index: 9999;
+    top: 50px;
+    right: 20px;
+    display: block !important;
+	}
+	.forcus_nav_menu {
+    	margin-top: 4px;
+    	/* display: none; */
+	}
+	.forcus_nav_menu ul {
+    list-style: none;
+    padding-left: 0px;
+    text-align: center;
+    background-color: rgba(44, 46, 131,0.9);
+	}
+	.forcus_nav_menu ul li {
+    padding: 2px 0px;
+    border: 1px solid rgba(44, 46, 131,0.8);
+	}
+	.forcus_nav_menu ul li ul.childx li {
+		border: 1px solid #ccc;
+	}
+	.forcus_nav_menu ul li a {
+    color: white !important;
+    font-size: 13px;
+    text-transform: uppercase;
+	}
+	.forcus_nav_menu ul li ul.childx li a {
+		color: #333 !important;
+	}
+	.forcus_nav_menu ul li:hover {
+    background-color: #e2b600;
+    border: 1px solid #2c2e83;
+	}
+
+	/* end style mmnu */
+	.cat_ul.fixed {
+		width: 168px;
+	}
+	.blockleft_list.fixed {
+		width: 158px;
+	}
+	.project-left .ul-project li i.i_project {
+		right: 0;
+	}
+	.view-more-project .line-more {
+    	width: 79%;
+	}
+	.box-search {
+		top: 78px;
+		left: 0;
+	}
+	.header a {
+		top: 42px;
+	}
+	.block-footer .footer-right .copyright {
+		margin-bottom: 5px;
+	}
+	.view-more .line-more {
+		width: 88%;
+	}
+	.view-more .text-right {
+		width: 12%;
+	}
+	.button-search {
+		position: absolute;
+    	bottom: 0;
+    	left: 0;
+	}
+	.logo>a>img {
+		margin: 0 auto;
+	}
+}
+@media (max-width: 767px)
+{
+	.block-slider .box_news .box_news_content {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+		margin-top: 15px;
+	}
+	.booking-toggle {
+		top: 60px;
+	}
+	.block-header {
+		/* margin-bottom: 30px; */
+	}
+	.project-left .ul-project li i.i_project {
+		right: 15px;
+	}
+	.project-right .content-project {
+		margin-bottom: 0;
+	}
+	.project-left {
+		margin-bottom: 0;
+	}
+	.project-right .content-project h2.h2-project {
+		margin-top: 15px;
+	}
+	.cat_ul.fixed {
+		width: 100%;
+		position: static !important;
+	}
+	.blockleft_list.fixed {
+		width: 100%;
+		position: static !important;
+	}
+	.box-search {
+		top: 104px;
+		left: 14%;
+	}
+	.header a {
+		top: 54px;
+	}
+	.block-footer {
+		background: #2c2e83 !important;
+		height: auto !important;
+		margin-top: 15px;
+	}
+	.block-footer .footer-left {
+    margin-top: 15px;
+    /* text-align: center; */
+    width: 100%;
+    margin-bottom: 8px;
+    border: none;
+    position: static;
+}
+	.block-footer .footer-right {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    height: auto;
+    position: static;
+}
+	.block-footer .footer-right .support {
+		margin-top: 0;
+	}
+	.block-footer .footer-right .support a{
+		color: #e2b600;
+	}
+	.block-footer .footer-right .support a:hover {
+		color: #c12d2d;
+	}
+	.block-footer .footer-right .copyright {
+		position: static;
+		margin-top: 10px;
+	}
+	.text-right {
+		text-align: left;
+	}
+	.view-more .line-more {
+		width: 100%;
+	}
+	.view-more .text-right {
+		width: 100%;
+		text-align: center;
+	}
+	.logo>a>img {
+		margin: 0;
+	}
+	.block-top
+	{
+		padding: 5px 0px;
+		height: auto;
+		/* text-align: center */
+	}
+	.project-left .ul-project {
+		margin-top: 15px;
+	}
+	.project-right h1.h1-project {
+		font-size: 20px;
+	}
+}
+@media (max-width: 600px)
+{ 
+	.camera_next {
+		right: 10px;
+	}
+	.camera_prev {
+		left: 10px;
+	}
+	.button-search {
+	top: 0;
+}
+	.box-search .ipt-key {
+		width: 147px;
+	}
+	.box-search {
+		width: 150px;
+		right: 15%;
+	}
+}
+@media (max-width: 500px)
+{ 
+	.respon-photo {
+		width: 100%;
+	}
+}
+@media (max-width: 369px)
+{	
+	.logo>a>img {
+		width: 60%;
+		margin-top: 10px;
+	}
+}
+@media (max-width: 322px)
+{	
+	.view-more-project .line-more {
+		width: 75%;
+	}
+}
+@media (max-width: 297px)
+{	
+	/* .box-search-home {
+		top: 141px;
+	} */
+	.booking-toggle {
+		top: 86px;
+	}
+	.header a {
+		top: 80px;
+	}
+	.box-search {
+		right: 15%;
+		top: 83px;
+	}
+}

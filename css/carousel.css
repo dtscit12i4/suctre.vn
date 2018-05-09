@@ -1,0 +1,277 @@
+#carousel-example-generic
+{
+    /* border-bottom: 3px solid rgb(130,130,130) !important; */
+}
+.carousel-control.left {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0) 0px, rgba(0, 0, 0, 0) 100%);
+    background-repeat: repeat-x;
+}
+.carousel-control.right {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.0) 100%);
+    background-repeat: repeat-x;
+    left: auto;
+    right: 0;
+}
+.carousel-caption {
+    bottom: 25%;
+    left: 15%;
+    right: 15%;
+    font-size: 24px;
+    /* font-style: italic; */
+    text-align: center;
+    text-transform: uppercase;
+}
+#carousel-example-generic-right .carousel-caption h3{
+    font-size: 18px;
+    font-style: bold;
+    margin: 0px;
+    text-align: center;
+    color: #fff;
+    background: rgba(14, 14, 14, 0.5);
+}
+#carousel-example-generic-right .carousel-caption{
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    padding-bottom: 0px;
+}
+#carousel-example-generic-right .carousel-indicators{
+    top: 10px;
+}
+.carousel-caption h3{
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    margin: 0 0 5px;
+    padding: 11px 35px 11px 20px;
+}
+.carousel-showone .carousel-inner > .item {
+    transition: left 1.0s ease-in-out 0s;
+}
+#carouselshow1 .thumbnail img
+{
+    height: 150px;
+    width: 100%;
+}@media (max-width: 768px) {
+    h2
+    {
+        font-size: 22px;
+    }
+    .navbar-brand
+    {
+        max-width: 200px;
+    }
+    .navbar-brand img
+    {
+        height: 42px;
+        float: left;
+    }
+    .navbar-nav > li > a
+    {
+        line-height: 14px;
+    }
+    .nav-tabs > li > a
+    {
+        font-size: 22px;
+        padding: 5px 20px;
+    }
+    .carousel-showone, .album-title
+    {
+        display: none;
+    }
+    #sticker
+    {
+        position: relative;
+    }
+    .dot-img, .content-img
+    {
+        height: auto;
+    }
+    #home .col-md-7:first-child
+    {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    #home .media img
+    {
+        width: 75px;
+    }
+    #carousel-example-generic1 > .carousel-indicators
+    {
+        width: 50%;
+        left: 55%;
+        top: 165px;
+    }
+    .foot-content .col-md-4
+    {
+        margin-top: 30px;
+    }
+    .content {
+        margin-top: 50px;
+    }
+    .media-left
+    {
+        width: 100%;
+    }
+    .thumbproducts img {
+        max-width: 1000px !important;
+        width: 215%;
+    }
+    .thumbproducts {
+        width: 100%;
+    }
+}
+.carousel-showmanymoveone .carousel-control {
+    width: 4%;
+    background-image: none;
+    opacity: 0.75;
+    top: -25%;
+}
+.carousel-showmanymoveone .carousel-control.left {
+    margin-left: 15px;
+}
+.carousel-showmanymoveone .carousel-control.right {
+    margin-right: 15px;
+}
+.carousel-showmanymoveone .carousel-control span {
+    color: #fff;
+}
+.carousel-showmanymoveone .carousel-control span:hover {
+    color: #cc0000;
+}
+.carousel-showmanymoveone .carousel-control {
+    opacity: 1;
+}
+.carousel-showmanymoveone .cloneditem-1,
+.carousel-showmanymoveone .cloneditem-2,
+.carousel-showmanymoveone .cloneditem-3 {
+    display: none;
+}
+.toggleCaption {
+    animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
+    -moz-transition: none !important;
+    float: left;
+    padding: 3px 10px;
+    background: rgba(49, 55, 143,0.9) none repeat scroll 0 0;
+}
+.toggleCaption_1 {
+    animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
+    -moz-transition: none !important;
+    float: left;
+    padding: 3px 10px;
+    background: rgba(227, 187, 23,0.85) none repeat scroll 0 0 !important;
+}
+.toggleCaption_1 span a
+{
+    color: white !important;
+}
+.toggleHeading {
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s;
+    -moz-transition: none !important;
+    float: left;
+    padding: 5px 10px;
+    background: rgba(49, 55, 143,0.7) none repeat scroll 0 0;
+}
+.carousel-indicators .active
+{
+    width: 30px !important;
+    height: 5px !important;
+    background: rgba(157,224,86,0.85);
+    border:rgba(157,224,86,0.85) ;
+}
+.carousel-indicators li
+{
+    width: 30px !important;
+    height: 5px !important;
+    background: darkgray;
+    border: darkgray;
+}
+@media all and (min-width: 768px) {
+    .carousel-showmanymoveone .carousel-inner > .active.left,
+    .carousel-showmanymoveone .carousel-inner > .prev {
+        left: -50%;
+    }
+    .carousel-showmanymoveone .carousel-inner > .active.right,
+    .carousel-showmanymoveone .carousel-inner > .next {
+        left: 50%;
+    }
+    .carousel-showmanymoveone .carousel-inner > .left,
+    .carousel-showmanymoveone .carousel-inner > .prev.right,
+    .carousel-showmanymoveone .carousel-inner > .active {
+        left: 0;
+    }
+    .carousel-showmanymoveone .carousel-inner .cloneditem-1 {
+        display: block;
+    }
+}
+@media all and (min-width: 768px) and (transform-3d), all and (min-width: 768px) and (-webkit-transform-3d) {
+    .carousel-showmanymoveone .carousel-inner > .item.active.right,
+    .carousel-showmanymoveone .carousel-inner > .item.next {
+        -webkit-transform: translate3d(50%, 0, 0);
+        transform: translate3d(50%, 0, 0);
+        left: 0;
+    }
+    .carousel-showmanymoveone .carousel-inner > .item.active.left,
+    .carousel-showmanymoveone .carousel-inner > .item.prev {
+        -webkit-transform: translate3d(-50%, 0, 0);
+        transform: translate3d(-50%, 0, 0);
+        left: 0;
+    }
+    .carousel-showmanymoveone .carousel-inner > .item.left,
+    .carousel-showmanymoveone .carousel-inner > .item.prev.right,
+    .carousel-showmanymoveone .carousel-inner > .item.active {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        left: 0;
+    }
+}
+@media all and (min-width: 992px) {
+    .carousel-showmanymoveone .carousel-inner > .active.left,
+    .carousel-showmanymoveone .carousel-inner > .prev {
+        left: -25%;
+    }
+    .carousel-showmanymoveone .carousel-inner > .active.right,
+    .carousel-showmanymoveone .carousel-inner > .next {
+        left: 25%;
+    }
+    .carousel-showmanymoveone .carousel-inner > .left,
+    .carousel-showmanymoveone .carousel-inner > .prev.right,
+    .carousel-showmanymoveone .carousel-inner > .active {
+        left: 0;
+    }
+    .carousel-showmanymoveone .carousel-inner .cloneditem-2,
+    .carousel-showmanymoveone .carousel-inner .cloneditem-3 {
+        display: block;
+    }
+}
+@media all and (min-width: 992px) and (transform-3d), all and (min-width: 992px) and (-webkit-transform-3d) {
+    .carousel-showmanymoveone .carousel-inner > .item.active.right,
+    .carousel-showmanymoveone .carousel-inner > .item.next {
+        -webkit-transform: translate3d(25%, 0, 0);
+        transform: translate3d(25%, 0, 0);
+        left: 0;
+    }
+    .carousel-showmanymoveone .carousel-inner > .item.active.left,
+    .carousel-showmanymoveone .carousel-inner > .item.prev {
+        -webkit-transform: translate3d(-25%, 0, 0);
+        transform: translate3d(-25%, 0, 0);
+        left: 0;
+    }
+    .carousel-showmanymoveone .carousel-inner > .item.left,
+    .carousel-showmanymoveone .carousel-inner > .item.prev.right,
+    .carousel-showmanymoveone .carousel-inner > .item.active {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        left: 0;
+    }
+}

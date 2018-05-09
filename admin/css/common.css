@@ -1,0 +1,21 @@
+
+.tab_update_controller
+{
+	background: #ccc;
+	padding:  5px;
+}
+
+.tab_update_controller.fixed
+{
+	position: fixed;
+	z-index: 9999;
+	top:  0;
+	left:  0;
+	width:  100%;
+	background: #aaa;
+}
+
+.tab_update_controller .preview
+{
+	float: right;
+}
