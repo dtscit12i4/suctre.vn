@@ -8,39 +8,26 @@
 
 		<?=$system->facebook_metatags($module);?>
 		
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
 		<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />    
 		<meta content="telephone=no" name="format-detection" />
 
 
 		<link rel="shortcut icon" href="<?=$root?>images/favicon.png" type="image/x-icon">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	    <!-- CSS -->
-	    <link rel="stylesheet" type="text/css" href="<?=$root?>css/font-awesome.css">
-	    <link rel="stylesheet" type="text/css" href="<?=$root?>css/bootstrap.css">
-	    <link rel="stylesheet" type="text/css" href="<?=$root?>css/bootstrap-theme.css">
-	    <link rel="stylesheet" type="text/css" href="<?=$root?>plugins/slick/slick.css">
-	    <link rel="stylesheet" type="text/css" href="<?=$root?>plugins/slick/slick-theme.css">
-	    <link rel="stylesheet" type="text/css" href="<?=$root?>css/animate.css" />
-	    <link href="<?=$root?>plugins/camera/css/camera.css" type="text/css" rel="stylesheet" />
-    	<link href="<?=$root?>plugins/camera/css/slider.css" type="text/css" rel="stylesheet" />
-    	<link rel="stylesheet" type="text/css" href="<?=$root?>source/jquery.fancybox.css">
-	    <link rel="stylesheet" type="text/css" href="<?=$root?>css/jquery.mmenu.all.css">
-	    <link rel="stylesheet" type="text/css" href="<?=$root?>css/demo.css" />
-	    <link rel="stylesheet" type="text/css" href="<?=$root?>css/carousel.css">
-	    <link rel="stylesheet" type="text/css" href="<?=$root?>css/simpescroll.css">
-	    <link rel="stylesheet" type="text/css" href="<?=$root?>css/style.css">
-	    <link rel="stylesheet" type="text/css" href="<?=$root?>css/responsive.css">
+		<link rel="stylesheet" type="text/css" href="<?=$root?>css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="<?=$root?>css/bootstrap-theme.css">
+		<link rel="stylesheet" type="text/css" href="<?=$root?>css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="<?=$root?>css/slick.css">
+		<link rel="stylesheet" type="text/css" href="<?=$root?>css/slick-theme.css">
+		<link rel="stylesheet" type="text/css" href="<?=$root?>css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&amp;subset=vietnamese" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&amp;subset=vietnamese" rel="stylesheet">
 	    <!-- JS -->
 	    <script type="text/javascript" src="<?=$root?>js/jquery.1.10.2.min.js"></script>
-	    <script type="text/javascript" src="<?=$root?>js/bootstrap.js"></script>
-	    <script type="text/javascript" src="<?=$root?>js/wow.min.js"></script>
-	    <script src="<?=$root?>plugins/camera/scripts/jquery.easing.1.3.js"></script>
-    <script src="<?=$root?>plugins/camera/scripts/camera.min.js"></script>
-    <script type="text/javascript" src="<?=$root?>source/jquery.fancybox.js"></script> 
-	    <script type="text/javascript" src="<?=$root?>js/jquery.mmenu.min.all.js"></script>
-	    <script type="text/javascript" src="<?=$root?>js/jquery.nicescroll.min.js"></script>
-	    <script type="text/javascript" src="<?=$root?>plugins/slick/slick.js"></script>
-	    <script type="text/javascript" src="<?=$root?>js/jquery.simplyscroll.js"></script>
+		<script type="text/javascript" src="<?=$root?>js/bootstrap.js"></script>
+		<script type="text/javascript" src="<?=$root?>js/slick.js"></script>
+		<script type="text/javascript" src="<?=$root?>js/style.js"></script>
 	</head>
 	

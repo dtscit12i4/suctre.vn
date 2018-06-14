@@ -130,13 +130,8 @@ function get_form($getMod,$id,$note)
 	if($getMod=='edit')
 	{
 		$name = $get->product($id,'name');
-        $vitri = $get->product($id,'vi_tri');
-        $gioithieu = $get->product($id,'gioi_thieu');
         $info = $get->product($id,'info');
-        $tongquan = $get->product($id,'tong_quan');
-        $tiendo = $get->product($id,'tien_do');
-        $tienich = $get->product($id,'tien_ich');
-        $link = $get->product($id,'link_y');
+        $content = $get->product($id,'content');
         $seo_title = $get->product($id,'seo_title');
         $seo_keywords = $get->product($id,'seo_keywords');
         $seo_description = $get->product($id,'seo_description');
@@ -149,13 +144,8 @@ function get_form($getMod,$id,$note)
         $display = $get->product($id,'display');
         $hot_item = $get->product($id,'hot_item');
         $name = $get->product($id,'name');
-        $vitri = $get->product($id,'vi_tri');
-        $gioithieu = $get->product($id,'gioi_thieu');
         $info = $get->product($id,'info');
-        $tongquan = $get->product($id,'tong_quan');
-        $tiendo = $get->product($id,'tien_do');
-        $tienich = $get->product($id,'tien_ich');
-        $link = $get->product($id,'link_y');
+        $content = $get->product($id,'content');
         $seo_title = $get->product($id,'seo_title');
         $seo_keywords = $get->product($id,'seo_keywords');
         $seo_description = $get->product($id,'seo_description');
@@ -164,13 +154,8 @@ function get_form($getMod,$id,$note)
 	elseif($_POST)
 	{
 		$name = $_POST['txt_name'];
-        $vitri = $_POST['txt_vi_tri'];
-        $gioithieu = $_POST['txt_gioi_thieu'];
+        $gioithieu = $_POST['txt_content'];
         $info = $_POST['txt_info'];
-        $tongquan = $_POST['txt_tong_quan'];
-        $tiendo = $_POST['txt_tien_do'];
-        $tienich = $_POST['txt_tien_ich'];
-        $link = $_POST['txt_link_y'];
         $seo_title = $_POST['txt_seo_title'];
         $seo_keywords = $_POST['txt_seo_keywords'];
         $seo_description = $_POST['txt_seo_description'];
@@ -179,13 +164,8 @@ function get_form($getMod,$id,$note)
     else
     {
         $name = '';
-        $vitri = '';
-        $gioithieu = '';
         $info = '';
-        $tongquan = '';
-        $tiendo = '';
-        $tienich = '';
-        $link = '';
+        $content = '';
         $seo_title = '';
         $seo_keywords = '';
         $seo_description = '';
@@ -303,80 +283,18 @@ function get_form($getMod,$id,$note)
                                             <div class="clearfix"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Giới thiệu dự án :</label>
+                                            <label class="control-label col-md-3">Nội dung :</label>
                                             <div class="col-md-8">
-                                                <textarea class="form-control" id="txt_gioithieu" name="txt_gioi_thieu" id="" rows="30"><?=$gioithieu?></textarea>
+                                                <textarea class="form-control" id="txt_content" name="txt_content" id="" rows="30"><?=$content?></textarea>
                                                 <script type="text/javascript">
                                                 // This is a check for the CKEditor class. If not defined, the paths must be checked.
                                                 if ( typeof CKEDITOR == 'undefined' ){document.write('') ;}
                                                 else
                                                 {
-                                                    var editor = CKEDITOR.replace( 'txt_gioithieu' );
+                                                    var editor = CKEDITOR.replace( 'txt_content' );
                                                     CKFinder.setupCKEditor( editor, '../ckfinder' );
                                                 }
                                                 </script>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3">Tổng quan dự án :</label>
-                                            <div class="col-md-8">
-                                                <textarea class="form-control" id="txt_tongquan" name="txt_tong_quan" id="" rows="30"><?=$tongquan?></textarea>
-                                                <script type="text/javascript">
-                                                // This is a check for the CKEditor class. If not defined, the paths must be checked.
-                                                if ( typeof CKEDITOR == 'undefined' ){document.write('') ;}
-                                                else
-                                                {
-                                                    var editor = CKEDITOR.replace( 'txt_tongquan' );
-                                                    CKFinder.setupCKEditor( editor, '../ckfinder' );
-                                                }
-                                                </script>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3">Vị trí trên bản đồ :</label>
-                                            <div class="col-md-8">
-                                                <input type="text" name="txt_vi_tri" value="<?=$vitri?>" class="form-control">
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3">Tiến độ :</label>
-                                            <div class="col-md-8">
-                                                <textarea class="form-control" id="txt_tiendo" name="txt_tien_do" id="" rows="30"><?=$tiendo?></textarea>
-                                                <script type="text/javascript">
-                                                // This is a check for the CKEditor class. If not defined, the paths must be checked.
-                                                if ( typeof CKEDITOR == 'undefined' ){document.write('') ;}
-                                                else
-                                                {
-                                                    var editor = CKEDITOR.replace( 'txt_tiendo' );
-                                                    CKFinder.setupCKEditor( editor, '../ckfinder' );
-                                                }
-                                                </script>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3">Tiện ích::</label>
-                                            <div class="col-md-8">
-                                                <textarea class="form-control" id="txt_tienich" name="txt_tien_ich" id="" rows="30"><?=$tienich?></textarea>
-                                                <script type="text/javascript">
-                                                // This is a check for the CKEditor class. If not defined, the paths must be checked.
-                                                if ( typeof CKEDITOR == 'undefined' ){document.write('') ;}
-                                                else
-                                                {
-                                                    var editor = CKEDITOR.replace( 'txt_tienich' );
-                                                    CKFinder.setupCKEditor( editor, '../ckfinder' );
-                                                }
-                                                </script>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Link youtube :</label>
-                                            <div class="col-md-8">
-                                                <input type="text" name="txt_link_y" value="<?=$link?>" class="form-control">
                                             </div>
                                             <div class="clearfix"></div>
                                         </div>

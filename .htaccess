@@ -16,11 +16,11 @@ RewriteRule ^product-list/								?module=product_list [L]
 RewriteRule ^danh-muc-du-an/(.*)/([0-9]*)/					?module=product_cat&slug=$1&page=$2 [L]
 RewriteRule ^danh-muc-du-an/(.*)/							?module=product_cat&slug=$1 [L]
 RewriteRule ^danh-muc-du-an/								?module=product_cat [L]
-RewriteRule ^du-an-bat-dong-san/([0-9]*)/					?module=product_categories&page=$1 [L]
-RewriteRule ^du-an-bat-dong-san/(.*)					?module=product_categories&slug=$1 [L]
-RewriteRule ^du-an-bat-dong-san/					?module=product_categories [L]
+RewriteRule ^du-an/([0-9]*)/					?module=product_categories&page=$1 [L]
+RewriteRule ^du-an/(.*)					?module=product_categories&slug=$1 [L]
+RewriteRule ^du-an/					?module=product_categories [L]
 
-RewriteRule ^du-an/(.*)							?module=product&slug=$1 [L]
+RewriteRule ^chi-tiet-du-an/(.*)							?module=product&slug=$1 [L]
 
 RewriteRule ^post/(.*)							?module=post&slug=$1 [L]
 
@@ -50,7 +50,7 @@ RewriteRule ^tuyen-dung/(.*)								?module=tuyen_dung&slug=$1 [L]
 
 RewriteRule ^tuyen-dung/						?module=tuyen_dung [L]
 
-RewriteRule ^gioi-thieu/(.*)							?module=gioi_thieu&slug=$1 [L]
+RewriteRule ^gioi-thieu.html							?module=gioi_thieu [L]
 
 RewriteRule ^thu-vien.html							?module=thu_vien [L]
 

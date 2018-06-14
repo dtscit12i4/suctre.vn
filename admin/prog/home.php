@@ -11,6 +11,12 @@
   </div>
 </div>
 <div class="row">
+<?php
+include_once '../lib_php/ofc-library/open_flash_chart_object.php';
+open_flash_chart_object( '100%', 350, $root.'admin/visitor_data.php', false, '../' );
+?>
+</div>
+<div class="row">
   <h3>Sơ đồ trang</h3>
   <table class="table table-bordered table-hover">
       <thead><td>Chức năng</td><td>Diễn giải</td><td>Quản lý</td></thead>

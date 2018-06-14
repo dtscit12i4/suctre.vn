@@ -112,12 +112,12 @@ function get_form($getMod,$id,$note)
     if($getMod=='edit')
     {
         $cat_name = $get->product($get->product_album($id,'cat'),'name');
-        $cat_url = "?act=gallery_list&id=".$get->product_album($id,'cat');
+        $cat_url = "?act=product_album_list&id=".$get->product_album($id,'cat');
     }
     else
     {
         $cat_name = $get->product($_GET['cat'],'name');
-        $cat_url = "?act=gallery_list&id=".$_GET['cat'];
+        $cat_url = "?act=product_album_list&id=".$_GET['cat'];
     }
 
 

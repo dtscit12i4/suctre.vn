@@ -15,6 +15,7 @@ $url1 = new ve_url1();
 
 $tbl_account = $prefix.'account';
 $tbl_product_album = $prefix.'product_album';
+$tbl_post_album = $prefix.'post_album';
 $tbl_gallery_album  = $prefix.'gallery_album ';
 $tbl_inquiry = $prefix.'inquiry';
 $tbl_email = $prefix.'email';

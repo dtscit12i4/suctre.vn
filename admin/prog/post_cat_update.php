@@ -222,14 +222,6 @@ function get_form($getMod,$id,$note)
                                             <div class="col-md-8">
                                                 <select name="txt_cat" class="form-control">
                                                     <option value="0">- Danh mục gốc -</option>
-                                                    <?
-                                                    $sql = '';
-                                                    if($getMod=='edit') $sql = " and id<>'".$id."'";
-                                                    $rs = $conn->query("select * from $tbl_post_cat where cat=0 $sql and visibility=1 order by sort");
-                                                    while($row=$rs->fetch_assoc()){
-                                                    ?>
-                                                        <option <?if($cat==$row['id']){echo 'selected';}?> value="<?=$row['id']?>"><?=$row['name']?></option>
-                                                    <?}?>                                                    
                                                 </select>
                                             </div>
                                             <div class="clearfix"></div>

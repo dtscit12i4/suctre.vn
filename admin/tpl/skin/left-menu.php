@@ -36,7 +36,7 @@
           <li><a href="?act=gallery_cat"><i class="fa fa-circle-o"></i> Quản lý hình ảnh</a></li>
           <li><a href="?act=post_cat"><i class="fa fa-circle-o"></i> Danh mục bài viết</a></li>
           <li><a href="?act=page"><i class="fa fa-circle-o"></i> Quản lý trang nội dung</a></li>
-          <li><a href="?act=video"><i class="fa fa-circle-o"></i> Quản lý video</a></li>
+          <!-- <li><a href="?act=video"><i class="fa fa-circle-o"></i> Quản lý video</a></li> -->
         </ul>
       </li>
 

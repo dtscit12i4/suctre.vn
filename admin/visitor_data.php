@@ -1,22 +1,23 @@
 <?php
-include("../config.php");
-$db		=	new	lg_mysql($host,$dbuser,$dbpass,$csdl);
-
+define('PATH_SYSTEM', 'tinhve');
+include "../includes/index.php";
+include "../config.php";
+include "../variables.php";
 $label	=	array();
 $data	=	array();
 $y_min	=	0;
 $y_max	=	0;
 
 $sql	=	"ngay like '%/".lg_date::vn_other(time(),"m")."/".lg_date::vn_other(time(),"Y")."'";
-$r		=	$db->select("tgp_online_daily",$sql,"order by ngay asc");
-while ($row = $db->fetch($r))
+$r		=	$conn->query("select * from tbl_tgp_online_daily where ".$sql." order by ngay asc");
+while ($row = $r->fetch_assoc())
 {
 	$label[]	=	str_replace("/".lg_date::vn_other(time(),"Y"),"", $row["ngay"]);
 	$data[]		=	$row["bo_dem"];
 	if ($y_max < $row["bo_dem"])	$y_max = $row["bo_dem"];
 }
 
-include_once( '../lib/ofc-library/open-flash-chart.php' );
+include_once( '../lib_php/ofc-library/open-flash-chart.php' );
 $g = new graph();
 
 $g->set_data( $data );

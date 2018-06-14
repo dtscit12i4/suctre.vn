@@ -45,6 +45,13 @@ class ve_get
 		$row = $rs->fetch_assoc();
 		return $row[$col];
 	}
+	public function post_album($id,$col='name')
+	{
+		global $conn, $tbl_post_album;
+		$rs = $conn->query("select $col from $tbl_post_album where id='".$id."'");
+		$row = $rs->fetch_assoc();
+		return $row[$col];
+	}	
 	public function product_cat($id,$col='name')
 	{
 		global $conn, $tbl_product_cat;

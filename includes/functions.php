@@ -3,7 +3,7 @@
 function active_menu($module,$id)
       {
       	global $get;
-        if($module=='product_cat'|$module=='tin_tuc')
+        if($module=='product_cat')
         {
           $cat = $id;
         }
@@ -11,7 +11,7 @@ function active_menu($module,$id)
         {
           $cat = $get->product($id,'cat');
         }
-        if($module=='tin_tuc_xem'|$module=='tuyen_dung_xem')
+        if($module=='tin_tuc_xem')
         {
           $cat = $get->post($id,'cat');
         }
@@ -233,6 +233,86 @@ function isAjaxRequest(){
 	if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') 
 		return true;
 	return false;
+}
+
+function count_online(){
+	global $conn;
+	$time = 600; // 10 phut
+	$ssid = session_id();
+	date_default_timezone_set("Asia/Bangkok");
+	// xoa het han
+	$sql = "delete from tbl_tgp_online where time<".(time()-$time);
+	$conn->query($sql);
+	//
+	$sql = "select id,session_id from tbl_tgp_online order by id desc";
+	$q = $conn->query($sql);
+	$result['dangxem'] = $q->num_rows;
+	$rows = result_array($q);
+	$i = 0;
+	while(($rows[$i]['session_id'] != $ssid) && $i++<$result['dangxem']);
+	if($i<$result['dangxem']){
+		$sql = "update tbl_tgp_online set time='".time()."' where session_id='".$ssid."'";
+		$conn->query($sql);
+		$result['daxem'] = $rows[0]['id'];
+	}
+	else{
+		$sql = "insert into tbl_tgp_online (session_id, time) values ('".$ssid."', '".time()."')";
+		$conn->query($sql);
+		$result['daxem'] = $conn->insert_id;
+		$result['dangxem']++;
+	}
+	
+	$is_add = 0;
+	$q = $conn->query("select * from tbl_tgp_counter where st_ip='".$_SERVER['REMOTE_ADDR']."' and st_week = '".date("W")."' and st_day = '".date("d")."' order by st_time desc");
+	if($q->num_rows == 0){
+			$is_add = 1;
+	}else{
+		$rs = $q->fetch_array();
+		if($rs['st_time']+300 < time()){
+			$is_add = 1;
+		}
+	}
+	if($is_add){
+		$sql = "insert into tbl_tgp_counter(st_time,st_week,st_month,st_day,st_year,st_ip,st_url) value(".time().",".date("W").",".date("m").",".date("d").",".date("Y").",'".$_SERVER['REMOTE_ADDR']."','".getCurrentPageURL()."')";
+		$conn->query($sql);
+	}	
+
+		$sql = "select * from tbl_tgp_counter where st_year = '".date("Y")."' and st_month = '".((date("m")))."' and   st_day = '".(date("d")-1)."'";
+		
+		$q0 = $conn->query($sql);
+		$statistics['yesterday'] = $q0->num_rows;
+		
+		$sql = "select * from tbl_tgp_counter where st_year = '".date("Y")."' and st_month = '".((date("m")))."' and   st_day = '".date("d")."'";
+		
+		$q1 = $conn->query($sql);
+		$statistics['today'] = $q1->num_rows;
+		
+		
+		
+		$sql = "select * from tbl_tgp_counter where st_year = '".date("Y")."' and st_month = '".date("m")."' and st_week = '".date("W")."'";
+		
+		$q2 = $conn->query($sql);
+		$statistics['week'] = $q2->num_rows;
+		$sql = "select * from tbl_tgp_counter where st_year = '".date("Y")."' and st_week = '".(date("W")-1)."'";
+		$q3 = $conn->query($sql);
+		
+		$statistics['last_week'] = $q3->num_rows;
+		$sql = "select * from tbl_tgp_counter where st_year = '".date("Y")."' and st_month = '".date("m")."'";
+		$q4 = $conn->query($sql);
+		$statistics['month'] = $q4->num_rows;
+		$sql = "select * from tbl_tgp_counter where st_year = '".date("Y")."' and st_month = '".(date("m")-1)."'";
+		
+		$q5 = $conn->query($sql);
+		$statistics['last_month'] = $q5->num_rows;
+		
+		$sql = $sql = "select * from tbl_tgp_counter";
+		$q6 = $conn->query($sql);
+		$statistics['all'] = $q6->num_rows;
+		
+		$result['advance'] = $statistics;
+		
+	
+	return $result; // array('dangxem'=>'', 'daxem'=>'')
 }
 
 function showpage($currentPage, $maxPage, $path = '') {

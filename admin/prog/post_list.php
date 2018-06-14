@@ -43,6 +43,7 @@ if($txtMod=='delete')
 								<th style="text-align:center;">Hình</th>
 								<th style="text-align:center;">Tên</th>
 								<th style="text-align:center;">Xem trước</th>
+								<th style="text-align:center;">Album</th>
 								<th style="text-align:center;">Thứ tự</th>
 								<th style="text-align:center;">Hiển thị</th>
 								<th style="text-align:center;">Sao chép</th>
@@ -70,6 +71,7 @@ if($txtMod=='delete')
 								<td><?=$img?></td>
 								<td><b><?=$row['name']?></b></td>
 								<td><a href="<?=$url->post($row['id'],"name")?>" target="_blank">[Xem]</a></td>
+								<td><a href="?act=post_album_list&id=<?=$row['id']?>" target="_blank">[Album]</a><br /><?count_item($row['id'],$tbl_post_album,"hình")?></td>
 								<td class="text-center"><input type = "number" name="txtSort" data-id="<?=$row["id"];?>" data-com="<?=$tbl_post;?>" value="<?=$row["sort"];?>" style="width:50px;text-align: center;"/></td>
 								<td class="text-center"><input type="checkbox" data-toggle="tooltip" title="tick chọn" <?=($row['display']) ? 'checked' : ''?> class="switch-input" data-type="display" data-com="<?=$tbl_post?>" data-id="<?=$row['id']?>"/></td>
 								<td class="text-center"><a href="?act=post_item_update&copy=1&id=<?=$row['id']?>">Sao chép</a></td>

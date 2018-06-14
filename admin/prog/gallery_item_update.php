@@ -20,17 +20,16 @@ $note = '';
         else
         {
             if($_POST['txt_cat']==2){
-                upload_image("../uploads/gal/",400,200,"doitac");
-            }
-            elseif($_POST['txt_cat']==9){
-                upload_image("../uploads/gal/",500,300,"photo");
+                upload_image("../uploads/gal/",500,100,"doitac");
             }
             elseif($_POST['txt_cat']==1){
-                upload_image("../uploads/gal/",1,1,"slide");
+                upload_image("../uploads/gal/",1200,880,"slide");
             }
-            
+            elseif($_POST['txt_cat']==7){
+                upload_image("../uploads/gal/",940,128,"lienhe");
+            }
             else{
-                upload_image("../uploads/gal/",1,1,"banner");
+                upload_image("../uploads/gal/",1000,160,"banner");
             }
             foreach ($POST as $key => $value) {
                 $value = $str->safe($value);
@@ -71,13 +70,16 @@ $note = '';
         else
         {
             if($_POST['txt_cat']==2){
-                upload_image("../uploads/gal/",400,200,"doitac");
+                upload_image("../uploads/gal/",500,100,"doitac");
             }
-            elseif($_POST['txt_cat']==9){
-                upload_image("../uploads/gal/",500,300,"photo");
+            elseif($_POST['txt_cat']==1){
+                upload_image("../uploads/gal/",1200,880,"slide");
             }
-            if($_POST['txt_cat']==1){
-                upload_image("../uploads/gal/",1,1,"slide");
+            elseif($_POST['txt_cat']==7){
+                upload_image("../uploads/gal/",940,128,"lienhe");
+            }
+            else{
+                upload_image("../uploads/gal/",1000,160,"banner");
             }
             foreach ($POST as $key => $value) {
                 $value = $str->safe($value);
@@ -115,13 +117,16 @@ $note = '';
         else
         {
             if($_POST['txt_cat']==2){
-                upload_image("../uploads/gal/",400,200,"doitac");
+                upload_image("../uploads/gal/",500,100,"doitac");
             }
-            elseif($_POST['txt_cat']==9){
-                upload_image("../uploads/gal/",500,300,"photo");
+            elseif($_POST['txt_cat']==1){
+                upload_image("../uploads/gal/",1200,880,"slide");
             }
-            if($_POST['txt_cat']==1){
-                upload_image("../uploads/gal/",1,1,"slide");
+            elseif($_POST['txt_cat']==7){
+                upload_image("../uploads/gal/",940,128,"lienhe");
+            }
+            else{
+                upload_image("../uploads/gal/",1000,160,"banner");
             }
             foreach ($POST as $key => $value) {
                 $value = $str->safe($value);
@@ -253,7 +258,7 @@ function get_form($getMod,$id,$note)
                                             <label class="control-label col-md-3">Hình ảnh :</label>
                                             <div class="col-md-8">
                                                 <input type="file" name="txt_thumbnail" value="" class="form-control">
-                                                <span>Kích thước: Slide 1500x650 pixels, đối tác: 400x200 pixels, Banner: 1500x350 pixels, Thư viện ảnh: 1500x900 pixels</span>
+                                                <span>Kích thước: Slide 1200x880 pixels, đối tác: 500x100 pixels, Banner: 1000x160 pixels, liên hệ: 940x128 pixels</span>
                                             </div>
                                             <div class="clearfix"></div>
                                         </div>

@@ -259,13 +259,6 @@ function get_form($getMod,$id,$note)
                                             <div class="clearfix"></div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Ngày đăng :</label>
-                                            <div class="col-md-8">
-                                                <input type="date" name="txt_time" value="<?=$time?>" class="form-control">
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        <div class="form-group">
                                             <label class="control-label col-md-3">Tên trang :</label>
                                             <div class="col-md-8">
                                                 <input type="text" name="txt_name" value="<?=$name?>" class="form-control">
@@ -303,9 +296,9 @@ function get_form($getMod,$id,$note)
                                         </div>
                                        
                                         <div class="form-group">
-                                            <label class="control-label col-md-12">Nội dung :</label>
-                                            <div class="col-md-12">
-                                                <textarea class="form-control" id="txtContent" name="txt_content" id="" rows="30" cols="80"><?=$content?></textarea>
+                                            <label class="control-label col-md-3">Nội dung :</label>
+                                            <div class="col-md-8">
+                                                <textarea class="form-control" id="txtContent" name="txt_content" id="" rows="30"><?=$content?></textarea>
                                                 <script type="text/javascript">
                                                 // This is a check for the CKEditor class. If not defined, the paths must be checked.
                                                 if ( typeof CKEDITOR == 'undefined' ){document.write('') ;}
